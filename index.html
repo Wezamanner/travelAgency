@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M & M Travel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fc;
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 0;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:25px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff7a00;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.hero img{
+    width:450px;
+    border-radius:20px;
+}
+
+/* SERVICES */
+.services{
+    text-align:center;
+    padding:80px 0;
+}
+
+.services h2{
+    margin-bottom:50px;
+}
+
+.service-boxes{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.service{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:250px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* DESTINATIONS */
+.destinations{
+    padding:80px 0;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    width:300px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+/* BOOK STEPS */
+.steps{
+    padding:80px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.step-text{
+    max-width:500px;
+}
+
+.step{
+    margin-bottom:25px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+    padding:80px 0;
+    text-align:center;
+}
+
+.testimonial-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    max-width:600px;
+    margin:auto;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 0;
+    margin-top:60px;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero img{
+        margin-top:40px;
+        width:100%;
+    }
+
+    .steps{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+  /* ===== Smooth Animations ===== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button hover */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Card hover */
+.card {
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Service hover */
+.service {
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth image hover */
+.hero img {
+    transition: all 0.5s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+
+/* Page fade on load */
+body {
+    animation: pageFade 1s ease-in-out;
+}
+
+@keyframes pageFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<div class="logo">M & M</div>
+<ul>
+<li><a href="#">Destinations</a></li>
+<li><a href="#">Hotels</a></li>
+<li><a href="#">Flights</a></li>
+<li><a href="#">Bookings</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+</nav>
+
+<section class="hero fade-in">
+<div class="hero-text">
+<h1>Travel, enjoy and live a new life</h1>
+<p>Explore the world with M & M. Discover beautiful destinations and create unforgettable memories.</p>
+<a href="#" class="btn">Find out more</a>
+</div>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Travel">
+</section>
+
+<section class="services fade-in">
+<h2>We Offer Best Services</h2>
+<div class="service-boxes">
+<div class="service">
+<h3>Calculated Weather</h3>
+<p>Plan your trip with accurate forecasts.</p>
+</div>
+<div class="service">
+<h3>Best Flights</h3>
+<p>Affordable and comfortable flights worldwide.</p>
+</div>
+<div class="service">
+<h3>Local Events</h3>
+<p>Discover events happening at your destination.</p>
+</div>
+</div>
+</section>
+
+<section class="destinations fade-in">
+<h2>Top Destinations</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba">
+<div class="card-content">
+<h3>Rome, Italy</h3>
+<p>10 Days Trip</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1473959383416-cf1e64e4e3e7">
+<div class="card-content">
+<h3>London, UK</h3>
+<p>12 Days Trip</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+<div class="card-content">
+<h3>Greece</h3>
+<p>14 Days Trip</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="steps fade-in">
+<div class="step-text">
+<h2>Book Your Next Trip In 3 Easy Steps</h2>
+
+<div class="step">
+<h4>Choose Destination</h4>
+<p>Select your favorite location.</p>
+</div>
+
+<div class="step">
+<h4>Make Payment</h4>
+<p>Secure and easy payment process.</p>
+</div>
+
+<div class="step">
+<h4>Enjoy Your Trip</h4>
+<p>Pack your bags and travel!</p>
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" width="400">
+</section>
+
+<section class="testimonial fade-in">
+<h2>What People Say About Us</h2>
+<div class="testimonial-box">
+<p>"M & M made my travel experience amazing and stress-free. Highly recommended!"</p>
+<br>
+<strong>- Happy Customer</strong>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 M & M Travel. All rights reserved.</p>
+</footer>
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+   threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+   entries.forEach(entry => {
+     if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+   appearOnScroll.observe(fader);
+});
+</script>
+</body>
+</html>
