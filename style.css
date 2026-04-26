@@ -4,10 +4,14 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-
+:root {
+    --text-color: rgb(162, 199, 195);
+  --main-color: #1a1a2e;
+  --accent-color: #ff6b6b;
+}
 body{
-    background:#f8f9fc;
-    color:#333;
+    background:var(--main-color);
+    color:var(--text-color);
 }
 
 .container{
@@ -22,6 +26,7 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:20px 0;
+    /* background-color: #f4ede4; */
   
 }
 
@@ -38,7 +43,7 @@ nav ul{
 
 nav a{
     text-decoration:none;
-    color:#333;
+    color:var(--text-color);
     font-weight:500;
 }
 
@@ -47,7 +52,7 @@ nav a{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:60px 0;
+    padding:300px 0;
 }
 
 .hero-text{
@@ -61,7 +66,7 @@ nav a{
 
 .hero p{
     margin-bottom:25px;
-    color:#555;
+    color:var(--text-color);
 }
 
 .btn{
@@ -77,6 +82,13 @@ nav a{
     width:450px;
     border-radius:20px;
 }
+.hero .img{
+    display: flex;
+    flex: 1 1 0;
+    flex-wrap: wrap-reverse;
+    
+}
+
 
 /* SERVICES */
 .services{
@@ -96,7 +108,8 @@ nav a{
 }
 
 .service{
-    background:white;
+    background:var(--text-color);
+    color: var(--main-color);
     padding:30px;
     border-radius:15px;
     width:250px;
@@ -119,6 +132,7 @@ nav a{
 
 .card{
     background:white;
+    /* color: var(--main-color); */
     border-radius:20px;
     overflow:hidden;
     width:300px;
@@ -133,6 +147,8 @@ nav a{
 
 .card-content{
     padding:20px;
+    background-color: var(--text-color);
+    color: var(--main-color);
 }
 
 /* BOOK STEPS */
@@ -159,7 +175,8 @@ nav a{
 }
 
 .testimonial-box{
-    background:white;
+    background:var(--text-color);
+    color: var(--main-color);
     padding:30px;
     border-radius:20px;
     max-width:600px;
@@ -169,8 +186,8 @@ nav a{
 
 /* FOOTER */
 footer{
-    background:#111;
-    color:white;
+    background:var(--text-color);
+    color:var(--main-color);
     text-align:center;
     padding:30px 0;
     margin-top:60px;
@@ -252,3 +269,6 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* .first-page{
+    height: 100vh;
+} */
